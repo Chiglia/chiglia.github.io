@@ -11,7 +11,7 @@
   "
   class="h-full w-full m-0 flex flex-column"
 >
-  <pre class="text-primary ml-5" style="padding-top: 7rem; font-size: 2px">
+  <pre class="hidden sm:block text-primary ml-5" style="padding-top: 7rem; font-size: 2px">
                                                                                                             @@@@@@                                                                                                                                                                                    
                               @@@@@@               @@@@@@@              @@@@@@                              @@@@@@                                                                                                                                                  @@@@@                             
                                @@@@@@              @@@@@@@             @@@@@@                               @@@@@@                                                                                                                                                 @@@@@@                             
@@ -34,13 +34,50 @@
                                        @@@@@@@@              @@@@@@@                 @@@@@@@@@@@@@@         @@@@@@            @@@@@@@@@@@@@           @@@@@@@@@@@@@             @@@@@           @@@@@@          @@@@@@           @@@@@@@@@@@@@@       @@@@@                                           
   </pre>
   <div class="text-center">
-    <h1 class="text-color-secondary font-bold pt-6 text-7xl m-0">Davide Chigliaro</h1>
+    <h1 class="text-color-secondary font-bold pt-8 sm:pt-6 text-7xl m-0">Davide Chigliaro</h1>
     <hr class="w-4" />
-    <h3 class="text-color-secondary m-0 pt-4 text-2xl">Web Developer | Designer | Freelancer</h3>
+    <h3 class="text-color-secondary m-0 pt-4 text-2xl">Web Developer | Designer | Nerd</h3>
     <div class="grid gap-2 justify-content-center m-4">
-      <p-button severity="secondary" [rounded]="true" icon="pi pi-linkedin" />
-      <p-button severity="secondary" [rounded]="true" icon="pi pi-envelope" />
-      <p-button severity="secondary" [rounded]="true" icon="pi pi-instagram" />
+      <a
+        href="https://www.linkedin.com/in/davidechigliaro"
+        pButton
+        target="_blank"
+        rel="noopener noreferrer"
+        [rounded]="true"
+        icon="pi pi-linkedin"
+        severity="secondary"
+        class="no-underline"
+      ></a>
+      <a
+        href="mailto:davide.chigliaro3@gmail.com"
+        pButton
+        target="_blank"
+        rel="noopener noreferrer"
+        [rounded]="true"
+        icon="pi pi-envelope"
+        severity="secondary"
+        class="no-underline"
+      ></a>
+      <a
+        href="https://github.com/Chiglia"
+        pButton
+        target="_blank"
+        rel="noopener noreferrer"
+        [rounded]="true"
+        icon="pi pi-github"
+        severity="secondary"
+        class="no-underline"
+      ></a>
+      <a
+        href="https://www.instagram.com/chigliadellabarca"
+        pButton
+        target="_blank"
+        rel="noopener noreferrer"
+        [rounded]="true"
+        icon="pi pi-instagram"
+        severity="secondary"
+        class="no-underline"
+      ></a>
     </div>
   </div>
 </div>

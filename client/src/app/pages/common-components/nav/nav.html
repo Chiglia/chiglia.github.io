@@ -1,6 +1,11 @@
-<div class="flex flex-row-reverse p-3 surface-100">
+<div class="flex align-items-center justify-content-between p-3 surface-100">
+  <!-- Logo -->
+  <div routerLink="/" class="flex align-items-center gap-2">
+    <i class="pi pi-user text-primary"></i>
+    <span class="text-xl">Davide<span class="text-primary font-bold">Chigliaro</span> </span>
+  </div>
   <!-- Icona mobile -->
-  <p-button icon="pi pi-bars" class="" (click)="menuVisible = !menuVisible" text> </p-button>
+  <p-button icon="pi pi-bars" (click)="menuVisible = !menuVisible" text />
 </div>
 
 <!-- Menu mobile -->

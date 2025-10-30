@@ -7,6 +7,25 @@
       [raised]="true"
       [routerLink]="[project.link]"
     >
+      <a class="w-full h-full" [href]="project.link" target="_blank" rel="noopener noreferrer">
+        <div
+          class="absolute z-1 p-3 text-white w-full h-full flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="text-3xl font-bold mb-0">{{ project.name }}</h5>
+          <hr class="w-7rem" />
+          <p class="mt-0">{{ project.description }}</p>
+        </div>
+
+        <div
+          class="absolute z-0 w-full h-full"
+          style="background-image: radial-gradient(circle at center,
+            rgba(0, 0, 0, 0.2) 40%,rgba(0, 0, 0, 0.6) 100%),
+              url('progetti/{{ project.id }}.jpg');
+              background-size: cover;
+              background-position: center;
+              filter: brightness(0.7);"
+        ></div>
+      </a>
     </p-button>
   </div>
   }
