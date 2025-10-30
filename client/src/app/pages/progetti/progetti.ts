@@ -16,21 +16,9 @@ export class Progetti {
       link: 'https://quiz.chiglia.ovh',
     },
     {
-      id: 'makeCanzoniere',
-      name: 'Make Canzoniere',
-      description: 'Portale per creare e condividere canzonieri digitali',
-      link: 'Quiz di Programmazione',
-    },
-    {
       id: 'scout',
       name: 'Scout',
       description: 'Sito web per un gruppo scout locale',
-      link: 'Quiz di Programmazione',
-    },
-    {
-      id: 'bluekippe',
-      name: 'Bluekippe',
-      description: 'Sito per società sportiva per disabili',
       link: 'Quiz di Programmazione',
     },
     {
@@ -44,6 +32,19 @@ export class Progetti {
       name: '1Hub',
       description: 'Piattaforma di aggregazione di risorse AI',
       link: 'https://www.1hub.ai/app/#/',
+    },
+    {
+      id: 'makeCanzoniere',
+      name: 'Make Canzoniere',
+      description: 'Portale per creare e condividere canzonieri digitali',
+      link: 'Quiz di Programmazione',
+    },
+
+    {
+      id: 'bluekippe',
+      name: 'Bluekippe',
+      description: 'Sito per società sportiva per disabili',
+      link: 'Quiz di Programmazione',
     },
   ];
 }
