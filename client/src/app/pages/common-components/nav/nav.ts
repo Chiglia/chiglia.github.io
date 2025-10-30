@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../../../shared.module';
 import { DrawerModule } from 'primeng/drawer';
 import { AvatarModule } from 'primeng/avatar';
+import { Buttons } from '../buttons/buttons';
 
 @Component({
   selector: 'app-nav',
-  imports: [SharedModule, DrawerModule, AvatarModule],
+  imports: [SharedModule, DrawerModule, AvatarModule, Buttons],
   templateUrl: './nav.html',
   styles: ``,
 })

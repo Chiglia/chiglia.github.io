@@ -1,33 +1,19 @@
-<div class="flex align-items-center justify-content-between p-3 surface-100 shadow-2">
-  <!-- Logo -->
-  <div routerLink="/" class="flex align-items-center gap-2">
-    <!-- <p-avatar icon="pi pi-user" size="normal" shape="circle"></p-avatar>
-        <span class="text-xl">Davide Chigliaro</span> -->
-  </div>
-
-  <!-- Menu -->
-  <div class="hidden md:flex align-items-center gap-2">
-    <p-button routerLink="/" label="Home" variant="text" />
-    <p-button routerLink="/about" label="About" variant="text" />
-    <p-button severity="contrast" [rounded]="true" icon="pi pi-moon" (click)="toggleTheme()" />
-  </div>
-
+<div class="flex flex-row-reverse p-3 surface-100">
   <!-- Icona mobile -->
-  <p-button icon="pi pi-bars" class="md:hidden" (click)="menuVisible = !menuVisible" text>
-  </p-button>
+  <p-button icon="pi pi-bars" class="" (click)="menuVisible = !menuVisible" text> </p-button>
 </div>
 
 <!-- Menu mobile -->
-<p-drawer [(visible)]="menuVisible" position="left">
-  <div class="flex flex-column gap-3 mt-4">
-    <p-button routerLink="/" label="Home" variant="text" />
-    <p-button routerLink="/about" label="About" variant="text" />
+<p-drawer [(visible)]="menuVisible" position="right">
+  <app-buttons></app-buttons>
+
+  <ng-template #footer>
     <p-button
       severity="contrast"
       [rounded]="true"
       icon="pi pi-moon"
       (click)="toggleTheme()"
-      class="p-button-rounded p-button-text mr-2"
+      class="mr-2"
     />
-  </div>
+  </ng-template>
 </p-drawer>

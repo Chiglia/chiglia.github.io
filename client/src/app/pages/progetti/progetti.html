@@ -1,0 +1,13 @@
+<div class="grid m-0 p-4 w-full">
+  @for (project of projects; track $index) {
+  <div class="col-12 p-2 m-0 sm:col-6 lg:col-4">
+    <p-button
+      styleClass="w-full p-0 m-0 h-14rem border-round-3xl lg:h-20rem"
+      severity="secondary"
+      [raised]="true"
+      [routerLink]="[project.link]"
+    >
+    </p-button>
+  </div>
+  }
+</div>
