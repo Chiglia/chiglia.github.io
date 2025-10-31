@@ -15,9 +15,14 @@
                     </div>
                   </ng-template>
                   <p class="m-0">
-                    12/12/2022 - 12/12/2023: Database Developer
+                    01/12/2021 - 30/03/2022: Database Developer
                     <br />
-                    Sviluppo e manutenzione di database SQL Server per clienti aziendali.
+                    Integrazione di database con il gestionale SAP per la gestione degli asset
+                    aziendali. Creazione e manutenzione di query in SQL, MySQL e Oracle per
+                    ottimizzare il flusso di dati tra i sistemi e garantire l'efficienza nella
+                    gestione delle informazioni.
+                    <br />
+                    Tecnologie utilizzate: SQL, MySQL, Oracle
                   </p>
                 </p-fieldset>
               </div>
@@ -31,7 +36,7 @@
     </p-step-item>
 
     <p-step-item [value]="2">
-      <p-step>Frontend Developer - SCAI ITEC</p-step>
+      <p-step>Frontend Developer - One Hub</p-step>
       <p-step-panel>
         <ng-template #content let-activateCallback="activateCallback">
           <div class="flex flex-col h-48">
@@ -45,9 +50,16 @@
                     </div>
                   </ng-template>
                   <p class="m-0">
-                    12/12/2022 - 12/12/2023: Database Developer
+                    01/06/2024 - 30/09/2024: Frontend Developer
                     <br />
-                    Sviluppo e manutenzione di database SQL Server per clienti aziendali.
+                    Sviluppo di un’applicazione web che permette di chattare con diverse IA
+                    confrontando le risposte. Sviluppo di diverse pagine in Angular e di servizi
+                    REST asincroni utilizzando il framework Python FastAPI che interagiscono con API
+                    pubbliche di diversi fornitori (OpenAI, Anthropic, ElevenLabs). Integrazione con
+                    sistemi di pagamento online, Stripe e Paypal, sia per pagamenti ad-hoc che la
+                    gestione di sottoscrizioni.
+                    <br />
+                    Tecnologie utilizzate: Git, Python, Angular, CSS, TypeScript, FastAPI
                   </p>
                 </p-fieldset>
               </div>
@@ -62,7 +74,7 @@
     </p-step-item>
 
     <p-step-item [value]="3">
-      <p-step>Frontend Developer - Dedagroup</p-step>
+      <p-step>Frontend Developer - Cherry Bank</p-step>
       <p-step-panel>
         <ng-template #content let-activateCallback="activateCallback">
           <div class="flex flex-col h-48">
@@ -76,9 +88,14 @@
                     </div>
                   </ng-template>
                   <p class="m-0">
-                    12/12/2022 - 12/12/2023: Database Developer
+                    30/11/2024 - 13/03/2024: Frontend Developer
                     <br />
-                    Sviluppo e manutenzione di database SQL Server per clienti aziendali.
+                    Assistenza al reparto legale nella gestione e correzione dei moduli
+                    contrattuali, utilizzando JavaScript in Adobe Designer. Responsabile
+                    dell'aggiornamento e della manutenzione della documentazione bancaria tramite le
+                    piattaforme Cedacri.
+                    <br />
+                    Tecnologie utilizzate: Javascript, Adobe Designer, piattaforme Cedacri
                   </p>
                 </p-fieldset>
               </div>
@@ -86,6 +103,42 @@
           </div>
           <div class="py-4">
             <p-button label="Back" severity="secondary" (onClick)="activateCallback(2)" />
+            <p-button label="Next" (onClick)="activateCallback(4)" />
+          </div>
+        </ng-template>
+      </p-step-panel>
+    </p-step-item>
+
+    <p-step-item [value]="4">
+      <p-step>Frontend Developer - Skill</p-step>
+      <p-step-panel>
+        <ng-template #content let-activateCallback="activateCallback">
+          <div class="flex flex-col h-48">
+            <div class="flex-auto flex justify-center items-center font-medium">
+              <div class="mt-4">
+                <p-fieldset>
+                  <ng-template #header>
+                    <div class="flex items-center gap-2">
+                      <p-avatar image="/esperienza/deda.jpg" shape="circle" />
+                      <span class="font-bold vertical-align-middle">Dedagroup</span>
+                    </div>
+                  </ng-template>
+                  <p class="m-0">
+                    01/05/2025 - <span class="text-primary">Present</span>: Frontend Developer
+                    <br />
+                    Assistenza al reparto legale nella gestione e correzione dei moduli
+                    contrattuali, utilizzando JavaScript in Adobe Designer. Responsabile
+                    dell'aggiornamento e della manutenzione della documentazione bancaria tramite le
+                    piattaforme Cedacri.
+                    <br />
+                    Tecnologie utilizzate: React, TypeScript, Redux, Cypress
+                  </p>
+                </p-fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="py-4">
+            <p-button label="Back" severity="secondary" (onClick)="activateCallback(3)" />
           </div>
         </ng-template>
       </p-step-panel>
