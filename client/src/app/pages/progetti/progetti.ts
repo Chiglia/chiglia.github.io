@@ -19,13 +19,13 @@ export class Progetti {
       id: 'scout',
       name: 'Scout',
       description: 'Sito web per un gruppo scout locale',
-      link: 'Quiz di Programmazione',
+      link: 'https://pd6.chiglia.ovh',
     },
     {
       id: 'parrocchia',
       name: 'Parrocchia',
       description: 'Sito web per una parrocchia locale',
-      link: 'Quiz di Programmazione',
+      link: 'https://cristorepd.it/',
     },
     {
       id: '1Hub',
@@ -37,7 +37,7 @@ export class Progetti {
       id: 'makeCanzoniere',
       name: 'Make Canzoniere',
       description: 'Portale per creare e condividere canzonieri digitali',
-      link: 'Quiz di Programmazione',
+      link: 'https://songs.chiglia.ovh',
     },
 
     {
