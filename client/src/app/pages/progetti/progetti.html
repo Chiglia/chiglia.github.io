@@ -7,16 +7,16 @@
       <i class="pi pi-briefcase text-primary text-3xl md:text-4xl"></i>
       Progetti Politi & Completi
     </h1>
-    <p class="text-slate-600 dark:text-slate-400 text-lg m-0 max-w-30rem">
+    <p class="text-slate-600 dark:text-slate-400 text-lg m-0 max-w-[30rem]">
       Una selezione delle mie migliori creazioni web, piattaforme gestionali e videogiochi
       interattivi, tutti completamente funzionanti e ospitati.
     </p>
   </div>
 
-  <!-- Projects grid grid-cols-1 -->
-  <div class="grid grid-cols-1 mt-2">
+  <!-- Projects responsive grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 w-full">
     @for (project of projects; track project.id) {
-      <div class="md:col-span-1 lg:col-span-1 p-3">
+      <div class="h-full">
         <div
           class="bg-white dark:bg-surface-900 border border-surface-200 dark:border-surface-700 rounded-3xl flex flex-col justify-between h-full shadow hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
           style="min-height: 440px"
@@ -84,7 +84,7 @@
                 class="block w-full"
               >
                 <p-button
-                  styleClass="w-full rounded-2xl h-3.5rem font-bold"
+                  styleClass="w-full rounded-2xl h-14 font-bold"
                   [label]="'Apri ' + project.name"
                   icon="pi pi-external-link"
                   iconPos="right"

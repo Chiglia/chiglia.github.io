@@ -15,7 +15,7 @@ import { SidePanel } from './pages/common-components/side-panel/side-panel';
       <div class="flex flex-row flex-1 overflow-hidden">
         <!-- Sidebar visibile solo da tablet in su -->
         <app-side-panel
-          class="hidden md:flex flex-none w-18rem"
+          class="hidden md:flex flex-none w-72"
         ></app-side-panel>
 
         <!-- Contenuto principale con scroll singolo -->
