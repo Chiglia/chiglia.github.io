@@ -1,6 +1,8 @@
-<div class="flex align-items-center justify-content-between p-3 surface-100">
+<div
+  class="flex items-center justify-between p-3 bg-bg-surface-100 dark:bg-surface-800 dark:bg-surface-800"
+>
   <!-- Logo -->
-  <div routerLink="/" class="flex align-items-center gap-2">
+  <div routerLink="/" class="flex items-center gap-2">
     <i class="pi pi-user text-primary"></i>
     <span class="text-xl">Davide<span class="text-primary font-bold">Chigliaro</span> </span>
   </div>
@@ -16,7 +18,7 @@
     <p-button
       severity="contrast"
       [rounded]="true"
-      icon="pi pi-moon"
+      [icon]="isDarkMode() ? 'pi pi-sun' : 'pi pi-moon'"
       (click)="toggleTheme()"
       class="mr-2"
     />

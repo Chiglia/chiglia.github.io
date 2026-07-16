@@ -1,32 +1,34 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/home/home';
-import { Esperienza } from './pages/esperienza/esperienza';
-import { Progetti } from './pages/progetti/progetti';
-import { Skills } from './pages/skills/skills';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: Home,
-    pathMatch: 'full',
-  },
-  {
-    path: 'esperienza',
-    component: Esperienza,
-    pathMatch: 'full',
-  },
-  {
-    path: 'progetti',
-    component: Progetti,
-    pathMatch: 'full',
-  },
-  {
-    path: 'skills',
-    component: Skills,
-    pathMatch: 'full',
-  },
-  {
-    path: '**',
-    redirectTo: '',
-  },
+    {
+        path: '',
+        loadComponent: () => import('./pages/home/home').then(m => m.Home),
+        title: 'Home'
+    },
+    {
+        path: 'esperienza',
+        loadComponent: () => import('./pages/esperienza/esperienza').then(m => m.Esperienza),
+        title: 'esperienza'
+    },
+    {
+        path: 'progetti',
+        loadComponent: () => import('./pages/progetti/progetti').then(m => m.Progetti),
+        title: 'progetti'
+    },
+    {
+        path: 'skills',
+        loadComponent: () => import('./pages/skills/skills').then(m => m.Skills),
+        title: 'skills'
+    },
+    {
+        path: 'page-not-found',
+        loadComponent: () => import('./pages/errors/page-not-found/page-not-found').then(m => m.PageNotFound),
+        title: '404 - Page Not Found'
+    },
+    {
+        path: '**',
+        redirectTo: 'page-not-found',
+        pathMatch: 'full'
+    }
 ];

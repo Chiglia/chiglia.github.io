@@ -1,32 +1,100 @@
-<div class="grid m-0 p-4 w-full">
-  @for (project of projects; track $index) {
-  <div class="col-12 p-2 m-0 sm:col-6 lg:col-4">
-    <p-button
-      styleClass="w-full p-0 m-0 h-14rem border-round-3xl lg:h-20rem"
-      severity="secondary"
-      [raised]="true"
-      [routerLink]="[project.link]"
+<div class="px-3 py-4 md:px-6 md:py-6 max-w-7xl mx-auto w-full">
+  <!-- Header Section -->
+  <div class="mb-5 text-center md:text-left">
+    <h1
+      class="text-4xl md:text-5xl font-bold m-0 mb-2 text-slate-900 dark:text-slate-100 flex items-center justify-center md:justify-start gap-2"
     >
-      <a class="w-full h-full" [href]="project.link" target="_blank" rel="noopener noreferrer">
-        <div
-          class="absolute z-1 p-3 text-white w-full h-full flex flex-column align-items-center justify-content-center"
-        >
-          <h5 class="text-3xl font-bold mb-0">{{ project.name }}</h5>
-          <hr class="w-7rem" />
-          <p class="mt-0">{{ project.description }}</p>
-        </div>
-
-        <div
-          class="absolute z-0 w-full h-full"
-          style="background-image: radial-gradient(circle at center,
-            rgba(0, 0, 0, 0.2) 40%,rgba(0, 0, 0, 0.6) 100%),
-              url('progetti/{{ project.id }}.jpg');
-              background-size: cover;
-              background-position: center;
-              filter: brightness(0.7);"
-        ></div>
-      </a>
-    </p-button>
+      <i class="pi pi-briefcase text-primary text-3xl md:text-4xl"></i>
+      Progetti Politi & Completi
+    </h1>
+    <p class="text-slate-600 dark:text-slate-400 text-lg m-0 max-w-30rem">
+      Una selezione delle mie migliori creazioni web, piattaforme gestionali e videogiochi
+      interattivi, tutti completamente funzionanti e ospitati.
+    </p>
   </div>
-  }
+
+  <!-- Projects grid grid-cols-1 -->
+  <div class="grid grid-cols-1 mt-2">
+    @for (project of projects; track project.id) {
+      <div class="md:col-span-1 lg:col-span-1 p-3">
+        <div
+          class="bg-white dark:bg-surface-900 border border-surface-200 dark:border-surface-700 rounded-3xl flex flex-col justify-between h-full shadow hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+          style="min-height: 440px"
+        >
+          <!-- Upper card section with Image and Overlay -->
+          <div class="flex flex-col">
+            <!-- Image container -->
+            <div
+              class="relative w-full overflow-hidden h-48 border-b border-surface-200 dark:border-surface-700 bg-surface-100 dark:bg-surface-800"
+            >
+              <img
+                [src]="project.image"
+                [alt]="project.name"
+                class="w-full h-full transition-all duration-500 hover:scale-105"
+                style="object-fit: cover; width: 100%; height: 100%"
+                referrerpolicy="no-referrer"
+              />
+
+              <!-- Category Badge overlay -->
+              <p-tag
+                [value]="project.category"
+                severity="contrast"
+                styleClass="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider shadow-lg"
+              />
+            </div>
+
+            <!-- Padded Content Area -->
+            <div class="p-4 flex flex-col">
+              <!-- Title with Icon -->
+              <div class="flex items-center gap-2 mb-2">
+                <i [class]="project.icon + ' text-xl text-primary'"></i>
+                <h3 class="text-xl font-bold m-0 text-slate-900 dark:text-slate-100 tracking-tight">
+                  {{ project.name }}
+                </h3>
+              </div>
+
+              <!-- Description -->
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm leading-7 mt-0 mb-2 h-20 overflow-hidden text-ellipsis"
+              >
+                {{ project.description }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Lower card section: Tech & CTA Button -->
+          <div class="px-4 pb-4 flex flex-col">
+            <!-- Tech stack tags -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              @for (tech of project.tech; track tech) {
+                <p-tag
+                  [value]="tech"
+                  severity="secondary"
+                  styleClass="text-[9px] font-mono font-bold tracking-wide uppercase"
+                />
+              }
+            </div>
+
+            <!-- Action button -->
+            @if (project.id !== '1Hub') {
+              <a
+                [href]="project.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full"
+              >
+                <p-button
+                  styleClass="w-full rounded-2xl h-3.5rem font-bold"
+                  [label]="'Apri ' + project.name"
+                  icon="pi pi-external-link"
+                  iconPos="right"
+                  [raised]="true"
+                ></p-button>
+              </a>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
 </div>

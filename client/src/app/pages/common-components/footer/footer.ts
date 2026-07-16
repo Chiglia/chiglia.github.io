@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../../shared.module';
+import { SharedModule } from '../../../../shared.module';
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +7,4 @@ import { SharedModule } from '../../../shared.module';
   templateUrl: './footer.html',
   styles: ``,
 })
-export class Footer {}
+export class Footer { }

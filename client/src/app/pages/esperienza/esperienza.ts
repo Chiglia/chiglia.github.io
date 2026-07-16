@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../shared.module';
+import { SharedModule } from '../../../shared.module';
 import { AvatarModule } from 'primeng/avatar';
 import { FieldsetModule } from 'primeng/fieldset';
 import { StepperModule } from 'primeng/stepper';
@@ -10,4 +10,6 @@ import { StepperModule } from 'primeng/stepper';
   templateUrl: './esperienza.html',
   styles: ``,
 })
-export class Esperienza {}
+export class Esperienza {
+
+}

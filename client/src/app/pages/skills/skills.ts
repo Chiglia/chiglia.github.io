@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../shared.module';
+import { SharedModule } from '../../../shared.module';
 import { ProgressBarModule } from 'primeng/progressbar';
 
 @Component({
@@ -8,4 +8,6 @@ import { ProgressBarModule } from 'primeng/progressbar';
   templateUrl: './skills.html',
   styles: ``,
 })
-export class Skills {}
+export class Skills {
+
+}
